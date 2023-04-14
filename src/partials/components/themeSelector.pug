@@ -1,0 +1,19 @@
+mixin item(name, icon)
+  -var iconClass = `bi-${icon}`
+    li: button.dropdown-item.d-flex.align-items-center(
+        type="button" data-bs-theme-value=`${name.toLowerCase()}` aria-pressed="false")
+        i.b.me-2.opacity-50.theme-icon(class=iconClass data-icon=iconClass)
+        | #{name}
+        i.bi.bi-check2.ms-auto.d-none
+
+li.nav-item.dropdown
+    button.btn.btn-link.nav-link.dropdown-toggle.dropdown-toggle-icon-none.d-flex.align-items-center(
+        id="bd-theme" type="button" aria-expanded="false"
+        data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)")
+        i.bi.bi-circle-half.theme-icon-active(data-icon="bi-circle-half")
+        span.d-md-none.ms-2(id="bd-theme-text") Toggle theme
+        i.icon-chevron-down
+    ul.dropdown-menu.dropdown-menu-end(aria-labelledby="bd-theme-text")
+        +item('Light','sun-fill')
+        +item('Dark','moon-stars-fill')
+        +item('Auto','circle-half')
