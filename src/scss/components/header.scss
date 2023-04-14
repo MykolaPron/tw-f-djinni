@@ -1,0 +1,19 @@
+.header {
+  .navbar {
+    &-nav {
+      .nav-link {
+        &:hover:not(.active) {
+          color: $cc-orange;
+        }
+
+        &.active {
+          position: relative;
+          font-weight: 700;
+          border-bottom: 2px solid $cc-orange;
+          pointer-events: none;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+mixin renderSortInput(name, checked)
+    input.btn-check(
+        type="radio"
+        name="btnradio"
+        id=`sort-${name.toLowerCase()}`
+        autocomplete="off"
+        checked=checked)
+    label.btn.btn-outline-secondary.fw-bold.border-2.px-4(for=`#sort-${name.toLowerCase()}`)= name
+
+.btn-group(role="group" aria-label="Sort")
+    input.btn-check(
+        type="radio"
+        name="btnradio"
+        id="sort-newest"
+        autocomplete="off"
+        checked)
+    label.btn.btn-outline-secondary.fw-bold.border-2.px-3(for="sort-newest") Newest
+    input.btn-check(
+        type="radio"
+        name="btnradio"
+        id="sort-latest"
+        autocomplete="off")
+    label.btn.btn-outline-secondary.fw-bold.border-2.px-3(for="sort-latest") Latest

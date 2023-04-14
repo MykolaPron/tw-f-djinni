@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+// Icons Font
+@import "fonts/style";
+
+@import "colors";
+// Theme Colors in map. To get Some use map-get($custom-colors, 'color-name')
+@import "custom";
+
+@import "components/gallery";
+@import "components/header";
+
+:root {
+  --line-clamp-height: calc(var(--bs-body-line-height) * var(--bs-body-font-size));
+}
+
+.dropdown-toggle-icon-none.dropdown-toggle::after {
+  display: none;
+}
+
+.line-clamp, .collapse-with-line-clamp {
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.collapse-with-line-clamp-2 {
+  @mixin line-clamp-height {
+    height: calc(var(--line-clamp-height) * 2);
+  }
+
+  &.collapse {
+    &:not(.show) {
+      -webkit-line-clamp: 2;
+      @include line-clamp-height
+    }
+  }
+
+  &.collapsing {
+    @include line-clamp-height
+  }
+}

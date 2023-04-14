@@ -1,0 +1,27 @@
+main.main.flex-shrink-0.mt-3.mt-md-5.pt-2
+    .container
+        .row
+            .col-md-3.mb-3.mb-md-0.ps-md-0
+                div.position-sticky(style="top: 2rem;")
+                    include ../components/gallery/fillter
+            .col-md-9.col-xl-8.offset-xl-1
+                .row.row-cols-1.row-cols-sm-2.mb-3.pb-3
+                    .col
+                        h1.fw-bold.mb-3.gallery-title All photos
+                        span.gallery-items-count 150 items
+                    .col.text-end
+                        include ../components/gallery/sort
+                .row.row-cols-1.row-cols-sm-2.row-cols-md-1.row-cols-lg-2.g-4(id="gallery")
+                  -var galleryItems = [{title:'Test', text:"Short text"},{title: 'About text generator APIs', text: 'The most straightforward variety of text generator API is, simply put, an API that creates placeholder content for a website or app. Other types of text generation APIs are predictive tools, which intake text and output follow-up text based on the input. These text generation APIs rely on AI to generate text.'},{title: 'What is a text generator API?', text: 'The first type of random text API allows designers and developers to easily generate filler text for whatever project they’re working on. The second type of text generation API uses neural networks trained on sample web pages to produce original content akin to what they found in their training datasets.'},{title: 'How do random text generator APIs work?', text: 'The more complicated random text generator APIs work by returning text completion in response to text prompts that the designer or developer operating the API inputs. The AI will model the text completion on the patterns it identifies in the original input. This means that it is beneficial to input as many relevant sample datasets as possible to maximize the API’s ability to generate text that matches. These APIs can also learn how to generate text from test users or labeler-generated feedback.'},{title: 'Best Text', text: 'Randommer comprises a collection of various types of APIs, including number, entertainment, and sports generators.'}];
+                    include ../components/gallery/item
+                  -var pattern = {s:'//',e:'//'}
+                    .col.gallery-item.gallery-template: +galleryItem(`${pattern.s}id${pattern.e}`,`${pattern.s}image${pattern.e}`,`${pattern.s}title${pattern.e}`,`${pattern.s}text${pattern.e}`)
+                    each item, index in galleryItems
+                        .col.gallery-item: +galleryItem(index + 1, `https://picsum.photos/id/${index}/356/200`, item.title, item.text)
+                    .col.gallery-item-uploade-more
+                        .card.h-100
+                            .card-body.d-flex.justify-content-center.align-items-center
+                                button.btn.btn-outline-primary.gallery-upload-more(
+                                    id="gallery-upload-more")
+                                    | Upload more
+
