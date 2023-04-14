@@ -1,7 +1,0 @@
-- var filterItems = [{icon: "icon-pictures", text: "All photos"},{icon: "icon-emoji-smile", text: "Selfies"},{icon: "icon-clock-circle", text: "All Recent"},{icon: "icon-trash-can", text: "Deleted"}]
-ul.nav.nav-pills.justify-content-between.flex-row.flex-md-column(aria-label="Filter" )
-  each item, index in filterItems
-      li.nav-item
-          a.nav-link.fw-bold(href=`#` class=!index ? "active" : "" aria-current=!index ? "page" : "")
-              i.me-2.fs-5(class=item.icon)
-              | #{item.text}
