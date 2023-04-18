@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel serve src/index.pug --public-url / --dist-dir dist",
-    "predeploy": "parcel build src/index.pug --public-url https://mykolapron.github.io/tw-f-djinni/",
+    "predeploy": "rm -rf dist && parcel build src/index.pug --public-url https://mykolapron.github.io/tw-f-djinni/",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
