@@ -43,3 +43,30 @@
     @include line-clamp-height
   }
 }
+
+*[data-bs-toggle="collapse"] {
+  &[aria-expanded="false"] {
+    .collapse-control-text {
+      &-not-collapsed {
+        display: none
+      }
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .collapse-control-text {
+      &-collapsed {
+        display: none
+      }
+
+      &-not-collapsed {
+        display: block
+      }
+    }
+  }
+}
+
+.icon-chevron-down {
+  margin-right: -3px;
+  margin-left: 3px;
+}

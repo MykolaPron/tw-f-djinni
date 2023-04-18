@@ -1,9 +1,17 @@
 .gallery {
   &-title {
-    line-height: .7;
+    line-height: 30px;
+  }
+
+  &-items-count {
+    font-size: 14px;
   }
 
   &-template {
     display: none;
+  }
+
+  &-fillter-container {
+    top: 1rem;
   }
 }

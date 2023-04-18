@@ -8,18 +8,24 @@ mixin galleryItem(id, imageUrl, title, text)
             width="356"
             height="200")
         .card-body.px-4
-          - var colapsedTextId = `card-collapse-${id}`
-          h4.card-title.fw-bold.lh-sm.line-clamp.line-clamp-1= title
-          p.card-text.mb-2.collapse.collapse-with-line-clamp.collapse-with-line-clamp-2(id=colapsedTextId)= text
-          button.btn.btn-link.p-0.fw-medium.text-decoration-none(
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target=`#${colapsedTextId}`
-              aria-expanded="false"
-              aria-controls="card-collapse") Show more...
+            - var colapsedTextId = `card-collapse-${id}`
+            h4.card-title.mt-1.mb-1.fw-bold.lh-sm.line-clamp.line-clamp-1= title
+            p.card-text.mb-2.collapse.collapse-with-line-clamp.collapse-with-line-clamp-2(id=colapsedTextId)
+                | text
+            button.btn.btn-link.p-0.fw-medium.text-decoration-none(
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=`#${colapsedTextId}`
+                data-bs-custom-class="beautifier"
+                aria-expanded="false"
+                aria-controls="card-collapse")
+                span.collapse-control-text-collapsed Show more...
+                span.collapse-control-text-not-collapsed  Show less..
         .card-footer.d-flex.gap-3.bg-body
-            button.btn.btn-primary.fw-bold.px-3(type="button") Save to collection
-            button.btn.btn-outline-secondary.fw-bold.border-2(type="button") Share
+            button.btn.btn-primary.fw-bold.px-2(type="button")
+                span.px-2 Save to collection
+            button.btn.btn-outline-secondary.fw-bold.border-2.ps-2.pe-3(type="button")
+                span.ps-1 Share
 
 
 mixin galleryItemProgress()

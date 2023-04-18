@@ -1,9 +1,9 @@
 - var navigationItems = ['Photos', 'Videos', 'Podcasts']
 ul.navbar-nav.d-inline-flex.gap-md-4
-  each item,index in navigationItems
-      li.nav-item
-          a.nav-link.py-md-4.px-0.d-inline-flex(
-              class=index ? "" : "active"
-              aria-current=index ? "" : "page"
-              href="#"
-          )=item
+    each item,index in navigationItems
+        li.nav-item
+            a.nav-link.py-md-4.px-0.d-inline-flex.lh-3(
+                class=index ? "" : "active"
+                aria-current=index ? "" : "page"
+                href="#"
+            )=item
