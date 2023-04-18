@@ -2,13 +2,13 @@ main.main.flex-shrink-0.mt-3.mt-md-5.pt-2
     .container
         .row
             .col-md-3.mb-3.mb-md-0.ps-md-0
-                div.position-sticky(style="top: 2rem;")
+                div.position-sticky.gallery-fillter-container
                     include ../components/gallery/fillter
             .col-md-9.col-xl-8.offset-xl-1
                 .row.row-cols-1.row-cols-sm-2.mb-3.pb-3
                     .col
                         h1.fw-bold.mb-3.gallery-title All photos
-                        span.gallery-items-count 150 items
+                        span.fw-bold.gallery-items-count 150 items
                     .col.text-end
                         include ../components/gallery/sort
                 .row.row-cols-1.row-cols-sm-2.row-cols-md-1.row-cols-lg-2.g-4(id="gallery")

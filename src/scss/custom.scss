@@ -2,6 +2,22 @@
 @import "~bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1200px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1140px
+);
+
 $font-family-base: 'Commissioner', sans-serif;
 
 $primary: $cc-orange;
@@ -18,7 +34,7 @@ $btn-link-color: $cc-dark;
 
 $input-group-addon-bg: $cc-gray;
 $input-group-addon-border-color: $cc-gray;
-$link-color: $cc-dark;
+$link-color: $cc-secondary;
 $link-hover-color: $cc-orange;
 $link-color-dark: $cc-white;
 $link-hover-color-dark: $cc-orange;

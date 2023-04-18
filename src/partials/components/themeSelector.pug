@@ -1,7 +1,9 @@
 mixin item(name, icon)
-  -var iconClass = `bi-${icon}`
+    -var iconClass = `bi-${icon}`
     li: button.dropdown-item.d-flex.align-items-center(
-        type="button" data-bs-theme-value=`${name.toLowerCase()}` aria-pressed="false")
+        type="button"
+        data-bs-theme-value=`${name.toLowerCase()}`
+        aria-pressed="false")
         i.b.me-2.opacity-50.theme-icon(class=iconClass data-icon=iconClass)
         | #{name}
         i.bi.bi-check2.ms-auto.d-none

@@ -12,9 +12,9 @@ header.header.border-bottom
             div.collapse.navbar-collapse.pt-2.p-md-0.row(id="main-navigation")
                 .col-md-auto.col-lg-3.col-xl-4: include components/mainNavigation
                 .col.my-2.border-top.d-md-none
-                .col-md-auto.col-lg-9.col-xl-8.d-flex.justify-content-between.gap-md-2.gap-lg-5
-                    .d-none.d-md-block.flex-fill: include components/headerSearch
-                    ul.navbar-nav.my-auto
+                .col-md-auto.col-lg-9.col-xl-8.d-flex.justify-content-between.pe-lg-1.gap-md-2.gap-lg-4
+                    .d-none.d-md-block.flex-fill.mt-1: include components/headerSearch
+                    ul.navbar-nav.my-auto.gap-lg-3.ps-lg-2
                         li(class="nav-item dropdown")
                             a.nav-link.dropdown-toggle.dropdown-toggle-icon-none(
                                 href="#"
@@ -22,7 +22,7 @@ header.header.border-bottom
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             ) English
-                                i.icon-chevron-down
+                                i.icon-chevron-down(style="")
 
                             ul.dropdown-menu(aria-labelledby="dropdown-language")
                                 li: a.dropdown-item.active(href="#") English
